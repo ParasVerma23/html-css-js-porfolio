@@ -186,19 +186,26 @@ section{
     height: 80vh;
 }
 
-.section__pic-container{
+.section__pic-container {
     display: flex;
     height: 400px;
     margin: auto 0;
     width: 50%;
     padding: 40px;
 }
-.profilePic
-{
+
+.profilePic {
     width: 300px;
     height: 300px;
-    border-radius: 50px;
-    
+    position: relative;
+    /* Perfect arch shape with straight bottom */
+    border-radius: 150px 150px 0 0;
+    /* Remove previous gradient masks */
+    -webkit-mask-image: none;
+    mask-image: none;
+    object-fit: cover;
+    /* Clean border all around */
+    border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .section__text{
